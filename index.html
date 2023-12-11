@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes App</title>
+  <!-- linked font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
+  <!-- ##### -->
+  <!-- linked fontawesome icon -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- ###### -->
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ###### -->
+  <!-- link mystyle sheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- ###### -->
+</head>
+<body>
+  <section class="container d-flex flex-column align-items-center text-center gap-4 py-5">
+
+    <h1 class="display-1 fw-bolder">Quote of the Day</h1>
+
+    <p class="fs-2 fw-medium">Press the button below to recieve a random quote!</p>
+
+    <button type="button" onclick={getQouteRandomly()} class="w-25 py-4 btn btn-outline-primary fw-bold border-3 mb-5">New Quote</button>
+
+    <div id="solution" class="fs-3">
+
+      <p id="quote" class="fw-bold px-4"></p>
+
+      <p id="quoteAuthor" class="fw-medium"></p>
+
+    </div>
+    
+  </section>
+
+
+
+  <!-- link my js-code -->
+  <script src="js/main.js"></script>
+  <!-- ########## -->
+  
+</body>
+</html>

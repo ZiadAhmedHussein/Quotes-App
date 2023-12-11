@@ -1,0 +1,61 @@
+
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+button {
+  position: relative;
+}
+
+button::after {
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f061";
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translate(0, -50%);
+  color: rgb(82, 82, 255);
+  font-size: 2.5rem;
+  animation-name: movingRightArrow;
+  animation-duration: .7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movingRightArrow {
+  50% {
+    transform: translate(-10px, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+button::before {
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f060";
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translate(0, -50%);
+  color: rgb(82, 82, 255);
+  font-size: 2.5rem;
+  animation-name: movingLeftArrow;
+  animation-duration: .7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movingLeftArrow {
+  50% {
+    transform: translate(10px, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+button:hover::after, 
+button:hover::before {
+  animation-name: none;
+}
